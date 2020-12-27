@@ -11,17 +11,12 @@ public class MkiwsApplication {
     public static void main(String[] args) {
         SpringApplication.run(MkiwsApplication.class, args);
     }
-
     @RestController
-    class Verleiservice {
+    class Verleihservices{
 
-        @RequestMapping(path="/")
-        public String  hallo() {
-            return "kjhgkjhjhgf";
+        @RequestMapping(path = "/")
+        public String hallo(){
+            return "Hallooo";
         }
-
     }
-
-
-
 }
