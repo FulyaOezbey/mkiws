@@ -1,16 +1,19 @@
-package info.vs_verleihservice.mkiws;
+package info.vs_verleihservice;
 
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
 @Service
 @AllArgsConstructor
-public class UserService {
+@SpringBootApplication
+@EntityScan
+@EnableJpaRepositories
+public class PostgresqlUserService implements UserService {
 
-    @Autowired
     private final UserRepository repository;
 
     public User createUser(User newUser){

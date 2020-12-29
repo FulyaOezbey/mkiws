@@ -1,4 +1,4 @@
-package info.vs_verleihservice.mkiws;
+package info.vs_verleihservice;
 
 
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 public class UserController {
 
-    private final UserService service;
+    private final PostgresqlUserService service;
 
     @PutMapping()
     public ResponseEntity<User> addNewUser(@RequestBody User newUser){

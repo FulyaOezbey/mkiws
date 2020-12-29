@@ -1,4 +1,4 @@
-package info.vs_verleihservice.mkiws;
+package info.vs_verleihservice;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
